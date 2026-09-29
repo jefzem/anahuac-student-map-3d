@@ -3,8 +3,8 @@ services:
     name: anahuac-student-map-3d
     runtime: node
     plan: free
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
-    startCommand: pnpm start
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
     healthCheckPath: /
     autoDeployTrigger: commit
 

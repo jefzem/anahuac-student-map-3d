@@ -4,7 +4,6 @@ var http = require('http');
 var https = require('https');
 var fs = require('fs');
 var path = require('path');
-var url = require('url');
 var crypto = require('crypto');
 var URLConstructor = require('url').URL;
 
@@ -309,7 +308,7 @@ function refreshListings() {
 var server = http.createServer(function (request, response) {
   var pathname;
   try {
-    pathname = decodeURIComponent(url.parse(request.url).pathname);
+    pathname = decodeURIComponent(new URLConstructor(request.url, 'http://localhost').pathname);
   } catch (error) {
     response.writeHead(400);
     response.end('Requête incorrecte');
