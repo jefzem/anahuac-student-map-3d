@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071516" />
+    <meta name="description" content="Carte 3D des logements étudiants autour de l'Universidad Anáhuac México Campus Norte." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Anáhuac — Habiter près du campus</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="map" aria-label="Carte 3D interactive des environs du Campus Norte"></canvas>
+      <header class="topbar glass">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div class="brand-copy">
+          <strong>Anáhuac / vivre ici</strong>
+          <span>Campus Norte · rayon 10 km</span>
+        </div>
+        <div class="top-actions">
+          <button id="resetView" class="icon-button" aria-label="Recentrer la carte" title="Recentrer">◎</button>
+          <button id="togglePanel" class="icon-button mobile-only" aria-label="Afficher les logements">⌂</button>
+        </div>
+      </header>
+
+      <aside class="sidebar glass" id="sidebar">
+        <div class="sidebar-head">
+          <div>
+            <p class="eyebrow">Sélection étudiante</p>
+            <h1>À portée de cours</h1>
+          </div>
+          <button id="closePanel" class="close-button mobile-only" aria-label="Fermer">×</button>
+        </div>
+        <p class="intro">Logements annoncés pour les étudiants de l’Anáhuac, dans un rayon de 5 km. Disponibilité à confirmer auprès de l’annonceur.</p>
+
+        <div class="refresh-row">
+          <button id="refreshListings" class="refresh-button" type="button"><span aria-hidden="true">↻</span> Mettre à jour les annonces</button>
+          <span id="refreshStatus" role="status" aria-live="polite">Vérifie les sources enregistrées</span>
+        </div>
+
+        <form id="addressForm" class="address-form">
+          <label for="addressInput">Ajouter une adresse à la carte</label>
+          <div class="address-controls">
+            <input id="addressInput" name="address" type="search" minlength="3" maxlength="200" placeholder="Rue, numéro, quartier…" autocomplete="street-address" required />
+            <button id="addressSubmit" type="submit">Ajouter</button>
+          </div>
+          <span id="addressStatus" role="status" aria-live="polite">Dans un rayon de 10 km autour du campus</span>
+          <a class="geocode-note" href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noopener">Recherche OSM à usage ponctuel · sans autocomplétion</a>
+        </form>
+
+        <div class="filters" aria-label="Filtres des logements">
+          <label>
+            <span>Budget maximum</span>
+            <strong id="budgetValue">30 000 MXN</strong>
+            <input id="budget" type="range" min="12000" max="30000" step="1000" value="30000" />
+          </label>
+          <div class="chip-row" id="typeFilters">
+            <button class="chip active" data-type="all">Tous</button>
+            <button class="chip" data-type="dorm">Dortoir</button>
+            <button class="chip" data-type="studio">Studio</button>
+            <button class="chip" data-type="loft">Loft</button>
+          </div>
+        </div>
+
+        <div class="result-meta"><span id="resultCount">0 logements</span><span id="updatedDate">mise à jour locale</span></div>
+        <div id="listings" class="listing-list" aria-live="polite"></div>
+      </aside>
+
+      <section class="time-panel glass" aria-label="Éclairage selon l'heure">
+        <div class="time-labels">
+          <span id="timeIcon">☀</span>
+          <strong id="timeText">12:00 · Midi</strong>
+        </div>
+        <input id="timeSlider" type="range" min="0" max="24" step="0.25" value="12" aria-label="Heure de la journée" />
+        <div class="time-ticks"><span>06</span><span>12</span><span>18</span><span>00</span></div>
+      </section>
+
+      <div class="map-key glass" aria-label="Légende">
+        <span><i class="dot rental"></i>Logement étudiant</span>
+        <span><i class="dot campus"></i>Campus</span>
+        <span><i class="dot commerce"></i>Commerce</span>
+        <span><i class="dot public"></i>Bâtiment public</span>
+        <span><i class="dot address"></i>Adresse ajoutée</span>
+        <small>Relief Copernicus DEM · Open-Meteo · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a></small>
+      </div>
+
+      <div id="loading" class="loading-screen">
+        <div class="loader-orbit"><i></i></div>
+        <p>Construction d’Interlomas en 3D</p>
+        <span id="loadingDetail">Lecture des données OpenStreetMap…</span>
+      </div>
+
+      <div id="tooltip" class="tooltip" role="status"></div>
+      <div id="detail" class="detail-card glass" aria-live="polite"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

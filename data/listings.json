@@ -1,0 +1,161 @@
+{
+  "updated": "2026-09-29",
+  "campus": {
+    "name": "Universidad Anáhuac México — Campus Norte",
+    "lat": 19.404145,
+    "lon": -99.260732
+  },
+  "listings": [
+    {
+      "id": "dorms-interlomas",
+      "name": "Dorms Interlomas",
+      "type": "dorm",
+      "studentOnly": true,
+      "price": 12000,
+      "extra": "+ 600 services",
+      "area": "18–19 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": false,
+      "distance": "1 min à pied",
+      "lat": 19.4033,
+      "lon": -99.263,
+      "features": [
+        "Cocinette",
+        "Bail 1 an",
+        "Parking optionnel"
+      ],
+      "note": "Dortoirs explicitement proposés aux étudiants. Options 18–19 m² ou 34 m² / 2 chambres; disponibilité et prix final à confirmer.",
+      "source": "https://www.pincali.com/inmueble/renta-de-lofts-interlomas",
+      "availability": "active",
+      "lastChecked": "2026-09-29T07:47:16.960Z",
+      "sourceStatus": 202
+    },
+    {
+      "id": "nomad-mini-suite",
+      "name": "Nomad mini-suite",
+      "type": "studio",
+      "studentOnly": true,
+      "price": 16350,
+      "extra": "services inclus",
+      "area": "20 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": true,
+      "distance": "~600 m",
+      "lat": 19.3995,
+      "lon": -99.2666,
+      "features": [
+        "Meublé",
+        "Internet",
+        "Piscine + coworking"
+      ],
+      "note": "Mini-suite annoncée comme idéale pour étudiants; eau, gaz, électricité, entretien et internet indiqués inclus. Parking en supplément.",
+      "source": "https://www.inmuebles24.com/departamentos-en-renta-en-interlomas-hasta-25000-pesos.html",
+      "availability": "unknown",
+      "lastChecked": "2026-09-29T07:47:16.726Z",
+      "sourceStatus": 403
+    },
+    {
+      "id": "blvd-interlomas",
+      "name": "Studio Blvd. Interlomas",
+      "type": "studio",
+      "studentOnly": true,
+      "price": 16000,
+      "extra": "entretien inclus",
+      "area": "32 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": false,
+      "distance": "800 m",
+      "lat": 19.3983,
+      "lon": -99.2669,
+      "features": [
+        "Sécurité 24/7",
+        "Coworking",
+        "Gym + piscine"
+      ],
+      "note": "Annonce destinée notamment aux étudiants, à 800 m du campus. Stationnement optionnel indiqué à 1 000 MXN/mois.",
+      "source": "https://www.pincali.com/inmueble/departamento-en-renta-en-interlomas-la-herradura-huixquilucan",
+      "availability": "active",
+      "lastChecked": "2026-09-29T07:47:17.059Z",
+      "sourceStatus": 202
+    },
+    {
+      "id": "parque-cadiz",
+      "name": "Loft Parque de Cádiz",
+      "type": "loft",
+      "studentOnly": true,
+      "price": 19000,
+      "extra": "services inclus",
+      "area": "65 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": true,
+      "distance": "~5 min",
+      "lat": 19.4097,
+      "lon": -99.2808,
+      "features": [
+        "Meublé",
+        "Internet",
+        "Accès surveillé"
+      ],
+      "note": "Loft meublé explicitement présenté comme idéal pour étudiants; eau, électricité, gaz et internet annoncés inclus.",
+      "source": "https://www.inmuebles24.com/departamentos-en-renta-en-lomas-anahuac.html",
+      "availability": "unknown",
+      "lastChecked": "2026-09-29T07:47:16.725Z",
+      "sourceStatus": 403
+    },
+    {
+      "id": "altern-interlomas",
+      "name": "Alterna Interlomas",
+      "type": "loft",
+      "studentOnly": true,
+      "price": 20000,
+      "extra": "+ entretien/services",
+      "area": "50 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": true,
+      "distance": "~1,5 km",
+      "lat": 19.3991,
+      "lon": -99.2742,
+      "features": [
+        "Meublé",
+        "Vestiaire",
+        "1 parking"
+      ],
+      "note": "Annonce présentée pour étudiants ou personnel de l’université; cuisine ouverte et logement prêt à habiter.",
+      "source": "https://www.vivanuncios.com.mx/a-renta-departamento/interlomas/departamento-en-renta-edificio-alterna-interlomas/148361834",
+      "availability": "unknown",
+      "lastChecked": "2026-09-29T07:47:16.785Z",
+      "sourceStatus": 403
+    },
+    {
+      "id": "interlomas-student",
+      "name": "Studio face au campus",
+      "type": "studio",
+      "studentOnly": true,
+      "price": 28000,
+      "extra": "à confirmer",
+      "area": "55 m²",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "furnished": false,
+      "distance": "en face",
+      "lat": 19.402,
+      "lon": -99.2643,
+      "features": [
+        "Neuf",
+        "Piscine",
+        "Gym"
+      ],
+      "note": "Appartement neuf annoncé comme idéal pour étudiants, juste en face du campus. Position cartographique approximative.",
+      "source": "https://www.vivanuncios.com.mx/a-renta-departamento/interlomas/departamento-en-renta-interlomas/149590105",
+      "availability": "unknown",
+      "lastChecked": "2026-09-29T07:47:16.805Z",
+      "sourceStatus": 403
+    }
+  ],
+  "lastChecked": "2026-09-29T07:47:17.059Z"
+}

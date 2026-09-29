@@ -1,0 +1,25 @@
+{
+  "name": "anahuac-student-map-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3002",
+    "build": "vite build",
+    "start": "node scripts/serve.cjs",
+    "preview": "vite preview --host 0.0.0.0 --port 3002",
+    "fetch:osm": "node scripts/fetch-osm.mjs",
+    "fetch:osm:fallback": "node scripts/fetch-osm-api-fallback.mjs",
+    "fetch:elevation": "node scripts/fetch-elevation.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "7.1.7"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
